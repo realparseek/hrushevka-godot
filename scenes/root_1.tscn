@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://bgf2t07oxn430"]
+
+[ext_resource type="Script" uid="uid://de0351gwcqf27" path="res://scripts/fps_player.gd" id="1_spvpx"]
+[ext_resource type="Material" uid="uid://w5takaomqo4k" path="res://materials/default_floor/material.tres" id="2_3ky0l"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_spvpx"]
+
+[sub_resource type="Sky" id="Sky_3ky0l"]
+sky_material = SubResource("ProceduralSkyMaterial_spvpx")
+
+[sub_resource type="Environment" id="Environment_q444e"]
+background_mode = 2
+sky = SubResource("Sky_3ky0l")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3chio"]
+points = PackedVector3Array(0.424839, 0.652873, 0.0982515, -0.436022, -0.623411, -0.0797158, -0.432713, -0.618619, 0.0974708, 0.397077, -0.745612, 0.068959, -0.0797158, 0.623411, -0.436022, -0.19655, 0.646528, 0.391202, 0.185661, -0.617968, -0.402775, 0.127954, -0.623117, 0.424708, -0.379336, 0.777495, -0.0802607, 0.333584, 0.7078, -0.256206, -0.112317, -0.976866, -0.0818135, -0.252602, -0.581262, -0.368864, 0.158709, 0.836384, 0.308048, -0.227183, -0.679606, 0.363795, 0.0708288, 0.978486, -0.112494, 0.417876, -0.525593, -0.166125, 0.270975, 0.553005, 0.358331, -0.402775, 0.617968, 0.185661, -0.368864, 0.581262, -0.252602, -0.142565, 0.943916, 0.161881, 0.358331, -0.553005, 0.270975, 0.100252, -0.907489, 0.251577, 0.190102, -0.903204, -0.201213, 0.243326, 0.614931, -0.371562, -0.0797166, -0.623417, -0.436027, 0.0390621, 0.684604, 0.426087, -0.436027, 0.623417, -0.0797166, -0.0809392, 0.905171, -0.262031, -0.292117, -0.874904, 0.0999565, -0.138093, -0.618581, 0.421576, -0.229593, -0.836334, -0.259442, -0.308851, -0.520016, 0.326691)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_spvpx"]
+radius = 0.45
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_q444e"]
+points = PackedVector3Array(7.12698, 10.1548, 0.158668, -7.15873, -10.1548, -0.158668, -7.15873, -10.1548, 0.158668, -7.15873, 10.1548, -0.158668, 7.12698, -10.1548, -0.158668, 7.12698, -10.1548, 0.158668, -7.15873, 10.1548, 0.158668, 7.12698, 10.1548, -0.158668)
+
+[sub_resource type="QuadMesh" id="QuadMesh_3ky0l"]
+material = ExtResource("2_3ky0l")
+size = Vector2(14, 20)
+
+[node name="root1" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q444e")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.611375, 0.791341, 0, -0.791341, -0.611375, 0, 4.93985, 0)
+light_energy = 0.3
+
+[node name="player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.0113, 0)
+script = ExtResource("1_spvpx")
+look_sensetivity = 3.0
+walk_speed = 8.0
+sprint_speed = 11.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player"]
+shape = SubResource("ConvexPolygonShape3D_3chio")
+
+[node name="world_model" type="Node3D" parent="player"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="player/world_model"]
+layers = 2
+mesh = SubResource("CapsuleMesh_spvpx")
+skeleton = NodePath("../..")
+
+[node name="head" type="Node3D" parent="player"]
+
+[node name="Camera3D" type="Camera3D" parent="player/head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+cull_mask = 1048573
+fov = 85.0
+
+[node name="floor" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_q444e")
+
+[node name="world_model" type="Node3D" parent="floor"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor/world_model"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_3ky0l")

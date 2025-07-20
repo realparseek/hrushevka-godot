@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://geb30cjmopjl"]
+
+[ext_resource type="Script" uid="uid://de0351gwcqf27" path="res://scripts/fps_player.gd" id="1_72ieh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kxjkn"]
+radius = 0.351008
+height = 1.70228
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8tq5h"]
+radius = 0.35
+height = 1.7
+
+[node name="player2" type="Node3D"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_72ieh")
+look_sensetivity = 3.0
+walk_speed = 3.0
+sprint_speed = 5.0
+gravity = 7.0
+jump_height = 7.0
+jump_duration = 0.2
+headbob_size = 0.05
+headbob_speed = 3.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_kxjkn")
+
+[node name="world_model" type="Node3D" parent="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/world_model"]
+layers = 2
+mesh = SubResource("CapsuleMesh_8tq5h")
+skeleton = NodePath("../..")
+
+[node name="head" type="Node3D" parent="CharacterBody3D"]
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499779, 0)
+cull_mask = 1048573
+fov = 85.0
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/head/Camera3D"]
+target_position = Vector3(0, 0, -1.7)
+collision_mask = 8
