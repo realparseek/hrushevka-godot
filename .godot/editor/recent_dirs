@@ -1,5 +1,9 @@
-res://shaders
+res://materials/outline2
+res://materials/outline2/
 res://materials/outline
+res://materials/doorknob1
+res://prefabs
+res://shaders
 res://prefabs/
 res://scenes
 res://materials/default_floor

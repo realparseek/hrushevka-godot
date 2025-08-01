@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bn0y22hkdtdqi"]
+
+[resource]
+resource_name = "Doorknob.002"
+cull_mode = 2
+albedo_color = Color(0.490528, 0.487399, 0.493661, 1)
+metallic = 0.622951
+roughness = 0.188525

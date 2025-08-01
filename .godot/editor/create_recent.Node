@@ -1,8 +1,8 @@
+StaticBody3D
+CollisionShape3D
 CanvasLayer
 Node3D
 RayCast3D
-CollisionShape3D
-StaticBody3D
 AnimationTree
 Node
 WorldEnvironment

@@ -11,12 +11,15 @@ extends CharacterBody3D
 
 @onready var pickcast : RayCast3D = $head/Camera3D/RayCast3D
 
+var cur_outline_obj : Object = null
+var outline_material : Resource = null
+
 var jump_timer : float = jump_duration
 var headbob_timer : float = 0.0
 var look_sensetivity_mul : float = 0.001
 
 func _ready() -> void:
-	pass
+	outline_material = load("res://materials/outline2/outline2.tres")
 	
 func _process(delta: float) -> void:
 	_handle_jump_timer(delta)
@@ -38,20 +41,24 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed('ui_cancel'):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
-	var pick_obj = _get_hovered_object()
+	var pick_obj : Object = _get_hovered_object()
 	if pick_obj:
-		var a : GeometryInstance3D = pick_obj.get_child(2).get_child(1).get_child(0).get_child(0)
-		a.material_overlay = load("res://materials/outline/outline.tres")
+		if not cur_outline_obj:
+			cur_outline_obj = pick_obj
+		pick_obj.get_child(0).set_hover(true)
+	else:
+		if cur_outline_obj:
+			cur_outline_obj.get_child(0).set_hover(false)
+			cur_outline_obj = null
 	
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
 			rotate_y(-event.relative.x*look_sensetivity*look_sensetivity_mul)
 			$head/Camera3D.rotate_x(-event.relative.y*look_sensetivity*look_sensetivity_mul)
 			$head/Camera3D.rotation.x = clamp($head/Camera3D.rotation.x, deg_to_rad(-90), deg_to_rad(90))
-		#if event is InputEventMouseButton:
-			#var pick_obj = _get_hovered_object()
-			#if pick_obj:
-				#pick_obj.get_child(1).play("Animation", -1, 1.7)
+		if event is InputEventMouseButton:
+			if pick_obj:
+				pick_obj.get_child(1).play("Action", -1, 1.7)
 
 
 func _handle_ground_movement() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=4 uid="uid://c6uww6ripgcff"]
+[gd_scene load_steps=102 format=4 uid="uid://c6uww6ripgcff"]
 
 [ext_resource type="Texture2D" uid="uid://bmtj5ssrkq0m" path="res://models/near_to_exit/textures/door.png" id="1_3k0wu"]
 [ext_resource type="PackedScene" uid="uid://geb30cjmopjl" path="res://prefabs/player.tscn" id="1_kxjkn"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://buy4lbw3x7e56" path="res://models/near_to_exit/textures/staircase_128.png" id="8_gsthd"]
 [ext_resource type="Texture2D" uid="uid://bbj2lyvk0odqs" path="res://models/near_to_exit/textures/railing.png" id="10_qre4e"]
 [ext_resource type="PackedScene" uid="uid://1883k2335wau" path="res://prefabs/door_2.tscn" id="11_kxjkn"]
+[ext_resource type="PackedScene" uid="uid://dlg4xjlvtgtps" path="res://models/электрощиток/электрощиток.glb" id="12_erp5q"]
 
 [sub_resource type="Environment" id="Environment_lcqa0"]
 ssao_enabled = true
@@ -1463,3 +1464,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.740
 
 [node name="door7" parent="." instance=ExtResource("11_kxjkn")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -8.64705, 1.98997, 12.4812)
+
+[node name="электрощиток" parent="." instance=ExtResource("12_erp5q")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -1.38984, 2.85949, 12.4234)

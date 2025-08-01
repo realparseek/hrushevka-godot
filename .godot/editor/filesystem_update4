@@ -1,0 +1,11 @@
+res://scenes/root_1.tscn
+res://materials/default_floor/material.tres
+res://shaders/perfect_outline.gdshader
+res://scenes/room1.tscn
+res://prefabs/door_2.tscn
+res://scripts/fps_player.gd
+res://materials/outline/outline.tres
+res://materials/doorknob1/doorknob1.tres
+res://materials/outline2/outline2.tres
+res://prefabs/player.tscn
+res://scripts/openable.gd
