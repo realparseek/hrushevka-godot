@@ -5,5 +5,5 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_fvm6y")
-shader_parameter/outline_color = Color(0.764706, 1, 1, 1)
-shader_parameter/outline_width = 3.0
+shader_parameter/outline_color = Color(0.192111, 0.410866, 0.34306, 1)
+shader_parameter/outline_width = 2.0

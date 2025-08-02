@@ -58,7 +58,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			$head/Camera3D.rotation.x = clamp($head/Camera3D.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 		if event is InputEventMouseButton:
 			if pick_obj:
-				pick_obj.get_child(1).play("Action", -1, 1.7)
+				var openable : Node = pick_obj.get_child(0)
+				if openable.is_opened:
+					openable.close()
+				else:
+					openable.open()
 
 
 func _handle_ground_movement() -> void:
