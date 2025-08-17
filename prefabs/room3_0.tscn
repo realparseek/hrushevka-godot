@@ -23,7 +23,7 @@ roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6f42a"]
 _surfaces = [{
-"aabb": AABB(-1.45389, 0.000425577, 0.00168926, 3.59995, 2.04118, 4.04413),
+"aabb": AABB(-1.44006, 0.000425577, -8.67844e-05, 3.59995, 2.04118, 4.04413),
 "format": 34359742465,
 "index_count": 54,
 "index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAAAAUAAwAGAAQAAwAFAAcACAAHAAUACAAJAAcABgAKAAQACQALAAcACQAMAAsABgANAAoADQAGAAsADQAOAAoADAAPAAsADQALAA8ADAAOAA8ADQAPAA4A"),
@@ -31,14 +31,14 @@ _surfaces = [{
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 16,
-"vertex_data": PackedByteArray("qTAEPwAg3zkAat06qTAEP7CpAkAQ2zo9qTAEP7CpAkAAat06qTAEPwAg3zkQ2zo9GFkJQLCpAkAQ2zo9Z5ILvwAg3zkAat06GFkJQAAg3zkQ2zo9Z5ILvwAg3zkQ2zo9Z5ILv7CpAkAAat06Z5ILv7CpAkAQ2zo9GFkJQLCpAkBcd4FAIBm6vwAg3zkQ2zo9IBm6v7CpAkAQ2zo9GFkJQAAg3zlcd4FAIBm6v7CpAkBcd4FAIBm6vwAg3zlcd4FA")
+"vertex_data": PackedByteArray("4LoHPwAg3zkAALa44LoHP7CpAkDAlDM94LoHP7CpAkAAALa44LoHPwAg3znAlDM9pjsKQLCpAkDAlDM9MAgIvwAg3zkAALa4pjsKQAAg3znAlDM9MAgIvwAg3znAlDM9MAgIv7CpAkAAALa4MAgIv7CpAkDAlDM9pjsKQLCpAkDPaIFABFS4vwAg3znAlDM9BFS4v7CpAkDAlDM9pjsKQAAg3znPaIFABFS4v7CpAkDPaIFABFS4vwAg3znPaIFA")
 }]
 blend_shape_mode = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_se7v0"]
 resource_name = "rooms3_0_Cube_019"
 _surfaces = [{
-"aabb": AABB(-1.45389, 0.000425577, 0.00168926, 3.59995, 2.04118, 4.04413),
+"aabb": AABB(-1.44006, 0.000425577, -8.67844e-05, 3.59995, 2.04118, 4.04413),
 "attribute_data": PackedByteArray("MDKhPaSKGT8oMqE92JHkPSgyoT3YkeQ9MDKhPaSKGT/jYDO+4JHkPd9gM76mihk/32AzvqaKGT/jYDO+4JHkPeNgM77gkeQ932AzvqaKGT/fYDO+pooZP+NgM77gkeQ9MDKhPaSKGT8AAACxAACAPygyoT3YkeQ9AACAsQAAgD8AAICxAACAPwAAALEAAIA/AAAAsQAAgD8AAICxAACAP+NgM77gkeQ932AzvqaKGT/fYDO+pooZP+NgM77gkeQ9AACAsQAAgD/jYDO+4JHkPQAAALEAAIA/32AzvqaKGT8AAICxAACAP99gM76mihk/32AzvqaKGT8AAICxAACAPzAyoT2kihk/32AzvqaKGT/fYDO+pooZPzAyoT2kihk/"),
 "format": 34359742487,
 "index_count": 54,
@@ -48,7 +48,7 @@ _surfaces = [{
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 36,
-"vertex_data": PackedByteArray("qTAEPwAg3zkAat06qTAEP7CpAkAQ2zo9qTAEP7CpAkAAat06qTAEPwAg3zkQ2zo9Z5ILv7CpAkAQ2zo9IBm6vwAg3zkQ2zo9Z5ILvwAg3zkQ2zo9IBm6v7CpAkAQ2zo9Z5ILv7CpAkAAat06Z5ILvwAg3zkQ2zo9Z5ILvwAg3zkAat06Z5ILv7CpAkAQ2zo9qTAEPwAg3zkQ2zo9GFkJQLCpAkAQ2zo9qTAEP7CpAkAQ2zo9GFkJQAAg3zkQ2zo9GFkJQAAg3zkQ2zo9GFkJQLCpAkBcd4FAGFkJQLCpAkAQ2zo9GFkJQAAg3zlcd4FAIBm6v7CpAkAQ2zo9IBm6vwAg3zlcd4FAIBm6vwAg3zkQ2zo9IBm6v7CpAkBcd4FAGFkJQAAg3zlcd4FAIBm6v7CpAkBcd4FAGFkJQLCpAkBcd4FAIBm6vwAg3zlcd4FAGFkJQAAg3zlcd4FAIBm6vwAg3zkQ2zo9IBm6vwAg3zlcd4FAGFkJQAAg3zkQ2zo9qTAEPwAg3zkQ2zo9Z5ILvwAg3zkAat06Z5ILvwAg3zkQ2zo9qTAEPwAg3zkAat06////f////7////9/////v////3////+/////f////7//////////v/////////+//////////7//////////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+///////dYg5P/////91iDk//////3WIOT/////////7////9/////v////3////+/////f////7////9/////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f2eiy+7/f/9/3r8P4P9//3//f////3//f2DXTtT/fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+/")
+"vertex_data": PackedByteArray("4LoHPwAg3zkAALa44LoHP7CpAkDAlDM94LoHP7CpAkAAALa44LoHPwAg3znAlDM9MAgIv7CpAkDAlDM9BFS4vwAg3znAlDM9MAgIvwAg3znAlDM9BFS4v7CpAkDAlDM9MAgIv7CpAkAAALa4MAgIvwAg3znAlDM9MAgIvwAg3zkAALa4MAgIv7CpAkDAlDM94LoHPwAg3znAlDM9pjsKQLCpAkDAlDM94LoHP7CpAkDAlDM9pjsKQAAg3znAlDM9pjsKQAAg3znAlDM9pjsKQLCpAkDPaIFApjsKQLCpAkDAlDM9pjsKQAAg3znPaIFABFS4v7CpAkDAlDM9BFS4vwAg3znPaIFABFS4vwAg3znAlDM9BFS4v7CpAkDPaIFApjsKQAAg3znPaIFABFS4v7CpAkDPaIFApjsKQLCpAkDPaIFABFS4vwAg3znPaIFApjsKQAAg3znPaIFABFS4vwAg3znAlDM9BFS4vwAg3znPaIFApjsKQAAg3znAlDM94LoHPwAg3znAlDM9MAgIvwAg3zkAALa4MAgIvwAg3znAlDM94LoHPwAg3zkAALa4////f////7////9/////v////3////+/////f////7//////////v/////////+//////////7//////////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+///////dYg5P/////91iDk//////3WIOT/////////7////9/////v////3////+/////f////7////9/////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f2eiy+7/f/9/3r8P4P9//3//f////3//f2DXTtT/fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+/")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6f42a")
@@ -91,3 +91,5 @@ shape = SubResource("BoxShape3D_s5v1o")
 [node name="Cube_021" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("ArrayMesh_se7v0")
 skeleton = NodePath("")
+
+[node name="rooms3_0" type="Node3D" parent="StaticBody3D"]

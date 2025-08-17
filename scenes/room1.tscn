@@ -1142,7 +1142,7 @@ size = Vector3(3.61746, 0.295441, 2.24022)
 
 [node name="room_generator" type="Node" parent="."]
 script = ExtResource("1_7iym2")
-spawners = [Vector3(2.483, 2, 12.551)]
+spawners = [Vector3(2.467, 2, 12.548)]
 
 [node name="button" type="Button" parent="."]
 offset_left = 19.0

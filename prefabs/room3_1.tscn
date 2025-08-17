@@ -23,7 +23,7 @@ roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_sfw4v"]
 _surfaces = [{
-"aabb": AABB(-5.33545, 0.000302553, 0.00206566, 6.02932, 2.04118, 2.82855),
+"aabb": AABB(-5.3038, 0.000302553, -8.67844e-05, 6.02932, 2.04118, 2.82855),
 "format": 34359742465,
 "index_count": 54,
 "index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAAAAUAAwAGAAQAAwAFAAcACAAHAAUACAAJAAcABgAKAAQACQALAAcACQAMAAsABgANAAoADQAGAAsADQAOAAoADAAPAAsADQALAA8ADAAOAA8ADQAPAA4A"),
@@ -31,14 +31,14 @@ _surfaces = [{
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 16,
-"vertex_data": PackedByteArray("yEH/PgCgnjkAYAc7yEH/Pq6nAkAAZjw9yEH/Pq6nAkAAYAc7yEH/PgCgnjkAZjw99KExP66nAkAAZjw9LCIQvwCgnjkAYAc79KExPwCgnjkAZjw9LCIQvwCgnjkAZjw9LCIQv66nAkAAYAc7LCIQv66nAkAAZjw99KExP66nAkDAKDVA+ruqwACgnjkAZjw9+ruqwK6nAkAAZjw99KExPwCgnjnAKDVA+ruqwK6nAkDAKDVA+ruqwACgnjnAKDVA")
+"vertex_data": PackedByteArray("4LoHPwCgnjkAALa44LoHP66nAkAAlTM94LoHP66nAkAAALa44LoHPwCgnjkAlTM98Ls5P66nAkAAlTM9MAgIvwCgnjkAALa48Ls5PwCgnjkAlTM9MAgIvwCgnjkAlTM9MAgIv66nAkAAALa4MAgIv66nAkAAlTM98Ls5P66nAkB8BTVAuripwACgnjkAlTM9uripwK6nAkAAlTM98Ls5PwCgnjl8BTVAuripwK6nAkB8BTVAuripwACgnjl8BTVA")
 }]
 blend_shape_mode = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2njl4"]
 resource_name = "rooms3_1_Cube_022"
 _surfaces = [{
-"aabb": AABB(-5.33545, 0.000302553, 0.00206566, 6.02932, 2.04118, 2.82855),
+"aabb": AABB(-5.3038, 0.000302553, -8.67844e-05, 6.02932, 2.04118, 2.82855),
 "attribute_data": PackedByteArray("MDKhPaSKGT8oMqE92JHkPSgyoT3YkeQ9MDKhPaSKGT/jYDO+4JHkPd9gM76mihk/32AzvqaKGT/jYDO+4JHkPeNgM77gkeQ932AzvqaKGT/fYDO+pooZP+NgM77gkeQ9MDKhPaSKGT8AAACxAACAPygyoT3YkeQ9AACAsQAAgD8AAICxAACAPwAAALEAAIA/AAAAsQAAgD8AAICxAACAP+NgM77gkeQ932AzvqaKGT/fYDO+pooZP+NgM77gkeQ9AACAsQAAgD/jYDO+4JHkPQAAALEAAIA/32AzvqaKGT8AAICxAACAP99gM76mihk/32AzvqaKGT8AAICxAACAPzAyoT2kihk/32AzvqaKGT/fYDO+pooZPzAyoT2kihk/"),
 "format": 34359742487,
 "index_count": 54,
@@ -48,7 +48,7 @@ _surfaces = [{
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 36,
-"vertex_data": PackedByteArray("yEH/PgCgnjkAYAc7yEH/Pq6nAkAAZjw9yEH/Pq6nAkAAYAc7yEH/PgCgnjkAZjw9LCIQv66nAkAAZjw9+ruqwACgnjkAZjw9LCIQvwCgnjkAZjw9+ruqwK6nAkAAZjw9LCIQv66nAkAAYAc7LCIQvwCgnjkAZjw9LCIQvwCgnjkAYAc7LCIQv66nAkAAZjw9yEH/PgCgnjkAZjw99KExP66nAkAAZjw9yEH/Pq6nAkAAZjw99KExPwCgnjkAZjw99KExPwCgnjkAZjw99KExP66nAkDAKDVA9KExP66nAkAAZjw99KExPwCgnjnAKDVA+ruqwK6nAkAAZjw9+ruqwACgnjnAKDVA+ruqwACgnjkAZjw9+ruqwK6nAkDAKDVA9KExPwCgnjnAKDVA+ruqwK6nAkDAKDVA9KExP66nAkDAKDVA+ruqwACgnjnAKDVA9KExPwCgnjnAKDVA+ruqwACgnjkAZjw9+ruqwACgnjnAKDVA9KExPwCgnjkAZjw9yEH/PgCgnjkAZjw9LCIQvwCgnjkAYAc7LCIQvwCgnjkAZjw9yEH/PgCgnjkAYAc7////f////7////9/////v////3////+/////f////7//////////v/////////+//////////7//////////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//////5p5MYP/////mnkxg/////+aeTGD/////////7////9/////v////3////+/////f////7////9/////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f3SYxPP/f/9/ltKz1v9//3//f////3//fzDk5s3/fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+/")
+"vertex_data": PackedByteArray("4LoHPwCgnjkAALa44LoHP66nAkAAlTM94LoHP66nAkAAALa44LoHPwCgnjkAlTM9MAgIv66nAkAAlTM9uripwACgnjkAlTM9MAgIvwCgnjkAlTM9uripwK6nAkAAlTM9MAgIv66nAkAAALa4MAgIvwCgnjkAlTM9MAgIvwCgnjkAALa4MAgIv66nAkAAlTM94LoHPwCgnjkAlTM98Ls5P66nAkAAlTM94LoHP66nAkAAlTM98Ls5PwCgnjkAlTM98Ls5PwCgnjkAlTM98Ls5P66nAkB8BTVA8Ls5P66nAkAAlTM98Ls5PwCgnjl8BTVAuripwK6nAkAAlTM9uripwACgnjl8BTVAuripwACgnjkAlTM9uripwK6nAkB8BTVA8Ls5PwCgnjl8BTVAuripwK6nAkB8BTVA8Ls5P66nAkB8BTVAuripwACgnjl8BTVA8Ls5PwCgnjl8BTVAuripwACgnjkAlTM9uripwACgnjl8BTVA8Ls5PwCgnjkAlTM94LoHPwCgnjkAlTM9MAgIvwCgnjkAALa4MAgIvwCgnjkAlTM94LoHPwCgnjkAALa4////f////7////9/////v////3////+/////f////7//////////v/////////+//////////7//////////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//////5p5MYP/////mnkxg/////+aeTGD/////////7////9/////v////3////+/////f////7////9/////vwAA/3////+/AAD/f////78AAP9/////vwAA/3////+//3//f3SYxPP/f/9/ltKz1v9//3//f////3//fzDk5s3/fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+/")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_sfw4v")
