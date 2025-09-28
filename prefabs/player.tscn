@@ -16,13 +16,13 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 script = ExtResource("1_72ieh")
 look_sensetivity = 3.0
-walk_speed = 3.0
-sprint_speed = 5.0
+walk_speed = 2.0
+sprint_speed = 3.0
 gravity = 7.0
 jump_height = 7.0
 jump_duration = 0.2
 headbob_size = 0.05
-headbob_speed = 3.0
+headbob_speed = 4.25
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_kxjkn")
