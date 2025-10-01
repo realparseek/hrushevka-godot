@@ -88,7 +88,7 @@ func _handle_jumping() -> void:
 
 func _handle_headbob(delta: float) -> void:
 	if is_on_floor():
-		$head.position.y = cos(headbob_timer)*headbob_size
+		$head.position.y = sin(headbob_timer)*headbob_size
 		headbob_timer += delta*headbob_speed*velocity.length()
 
 func _handle_jump_timer(delta: float) -> void:

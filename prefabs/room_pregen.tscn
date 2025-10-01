@@ -3058,12 +3058,12 @@ omni_range = 2.1937308
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1512632, 2.391601, 2.944265)
 light_color = Color(0.6199716, 0.5703204, 0.43722445, 1)
-omni_range = 1.649648
+omni_range = 2.3371027
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9605806, 2.5786085, 4.024461)
 light_color = Color(0.6199716, 0.5703204, 0.43722445, 1)
-omni_range = 3.8640797
+omni_range = 5.387515
 
 [node name="collisions" type="Node3D" parent="."]
 

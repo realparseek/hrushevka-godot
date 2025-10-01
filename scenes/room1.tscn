@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=4 uid="uid://c6uww6ripgcff"]
+[gd_scene load_steps=105 format=4 uid="uid://c6uww6ripgcff"]
 
 [ext_resource type="Texture2D" uid="uid://b4213gxdt68do" path="res://models/near_to_exit_doors/near_to_exit_door.png" id="1_erp5q"]
 [ext_resource type="PackedScene" uid="uid://geb30cjmopjl" path="res://prefabs/player.tscn" id="1_kxjkn"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://1883k2335wau" path="res://prefabs/door_2.tscn" id="11_kxjkn"]
 [ext_resource type="PackedScene" uid="uid://dlg4xjlvtgtps" path="res://models/электрощиток/электрощиток.glb" id="12_erp5q"]
 [ext_resource type="PackedScene" uid="uid://bomva7sdrp37a" path="res://prefabs/room_pregen.tscn" id="13_8tq5h"]
+[ext_resource type="PackedScene" uid="uid://drw6ihilkge66" path="res://prefabs/lightbulb.tscn" id="14_7iym2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_woqc3"]
 resource_name = "door"
@@ -1085,6 +1086,7 @@ shadow_mesh = SubResource("ArrayMesh_s0pjq")
 
 [sub_resource type="Environment" id="Environment_lcqa0"]
 ssao_radius = 1.5
+glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3k0wu"]
 size = Vector3(0.248701, 3.03784, 2.06431)
@@ -1457,7 +1459,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45381, 3.86347, 6.018)
 shape = SubResource("BoxShape3D_xvwhl")
 
 [node name="door2" parent="." instance=ExtResource("11_kxjkn")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.01628, 2.002, 12.551691)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.01628, 2.002, 12.547415)
 
 [node name="door3" parent="." instance=ExtResource("11_kxjkn")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.32353, 1.99124, 12.4774)
@@ -1478,4 +1480,7 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -8.64705
 transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -1.38984, 2.85949, 12.462011)
 
 [node name="room_pregen" parent="." instance=ExtResource("13_8tq5h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4681594, 2.0030975, 12.544989)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4669034, 1.9977922, 12.547127)
+
+[node name="lightbulb" parent="." instance=ExtResource("14_7iym2")]
+transform = Transform3D(0.333017, -0.94292074, 0, 0.94292074, 0.333017, 0, 0, 0, 1, -0.8221605, 2.0612276, 14.786309)
