@@ -1,8 +1,8 @@
 shader_type canvas_item;
 
 uniform sampler2D screen_texture: hint_screen_texture, repeat_disable, filter_nearest;
-uniform vec2 viewport_size = vec2(1600, 900);
-uniform vec2 virtual_resolution = vec2(320, 240);
+uniform vec2 viewport_size = vec2(640, 480);
+uniform vec2 virtual_resolution = vec2(640, 480);
 uniform float shadow_smoothness = 0.5;
 uniform int color_depth = 32;
 uniform float dither_strength = 0.02;
@@ -37,7 +37,7 @@ bool is_shadow_color(vec3 color) {
 
 // CRT эффекты (применяются ПОСЛЕ основного шейдера)
 vec3 apply_scanlines(vec3 color, vec2 uv) {
-    float scanline = sin(uv.y * viewport_size.y * 3.14159) * 0.3 + 0.7;
+    float scanline = sin(uv.y * viewport_size.y * 3.14159) * 0.1 + 0.2;
     scanline = mix(1.0, scanline, scanline_strength);
     return color * scanline;
 }
