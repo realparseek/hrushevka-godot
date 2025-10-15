@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=4 uid="uid://c6uww6ripgcff"]
+[gd_scene load_steps=111 format=4 uid="uid://c6uww6ripgcff"]
 
 [ext_resource type="Texture2D" uid="uid://b4213gxdt68do" path="res://models/near_to_exit_doors/near_to_exit_door.png" id="1_erp5q"]
 [ext_resource type="PackedScene" uid="uid://geb30cjmopjl" path="res://prefabs/player.tscn" id="1_kxjkn"]
@@ -14,6 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://dlg4xjlvtgtps" path="res://models/электрощиток/электрощиток.glb" id="12_erp5q"]
 [ext_resource type="PackedScene" uid="uid://bomva7sdrp37a" path="res://prefabs/room_pregen.tscn" id="13_8tq5h"]
 [ext_resource type="PackedScene" uid="uid://drw6ihilkge66" path="res://prefabs/lightbulb.tscn" id="14_7iym2"]
+[ext_resource type="Shader" uid="uid://iouphtxhkil3" path="res://shaders/ps1_post_proccess.gdshader" id="15_bhtnt"]
+[ext_resource type="Script" uid="uid://cy13o256s2be3" path="res://uother.gd" id="16_aab6w"]
+[ext_resource type="AudioStream" uid="uid://dvrrfgatp7a8x" path="res://sounds/abmience/transformer_hum1.ogg" id="17_gsthd"]
+[ext_resource type="AudioStream" uid="uid://cxwabyjbe1wj4" path="res://sounds/abmience/underground.ogg" id="17_xvwhl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_woqc3"]
 resource_name = "door"
@@ -1085,8 +1089,14 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_s0pjq")
 
 [sub_resource type="Environment" id="Environment_lcqa0"]
+tonemap_mode = 3
+tonemap_exposure = 1.1
+ssao_enabled = true
 ssao_radius = 1.5
 glow_enabled = true
+glow_mix = 0.7
+glow_bloom = 0.1
+glow_blend_mode = 4
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3k0wu"]
 size = Vector3(0.248701, 3.03784, 2.06431)
@@ -1138,6 +1148,16 @@ size = Vector3(1.64355, 0.316589, 3.12676)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xvwhl"]
 size = Vector3(3.61746, 0.295441, 2.24022)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aab6w"]
+shader = ExtResource("15_bhtnt")
+shader_parameter/viewport_size = Vector2(1600, 900)
+shader_parameter/virtual_resolution = Vector2(640, 480)
+shader_parameter/shadow_smoothness = 0.7
+shader_parameter/color_depth = 64
+shader_parameter/dither_strength = 0.01
+
+[sub_resource type="AudioStream" id="AudioStream_aab6w"]
 
 [node name="room1" type="Node3D"]
 
@@ -1484,3 +1504,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4669034, 1.9977922, 12.5471
 
 [node name="lightbulb" parent="." instance=ExtResource("14_7iym2")]
 transform = Transform3D(0.333017, -0.94292074, 0, 0.94292074, 0.333017, 0, 0, 0, 1, -0.8221605, 2.0612276, 14.786309)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_aab6w")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="uother" type="AudioStreamPlayer3D" parent="AudioStreamPlayer"]
+transform = Transform3D(0.62144864, 0, 0.78345495, 0, 1, 0, -0.78345495, 0, 0.62144864, 5.4373517, 2.4834561, 16.148869)
+stream = SubResource("AudioStream_aab6w")
+volume_db = -40.0
+unit_size = 1.0
+max_db = 1.0
+autoplay = true
+max_distance = 2.2
+bus = &"New Bus"
+playback_type = 1
+script = ExtResource("16_aab6w")
+
+[node name="ambient" type="AudioStreamPlayer" parent="AudioStreamPlayer"]
+stream = ExtResource("17_xvwhl")
+volume_db = -51.0
+autoplay = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="AudioStreamPlayer"]
+transform = Transform3D(0.9992441, 0, -0.03887613, 0, 1, 0, 0.03887613, 0, 0.9992441, -1.7615035, 3.615302, 12.505299)
+stream = ExtResource("17_gsthd")
+volume_db = -55.0
+unit_size = 3.0
+max_db = 1.0
+autoplay = true
+max_distance = 2.2
+bus = &"New Bus"
+emission_angle_enabled = true
+emission_angle_degrees = 90.0
