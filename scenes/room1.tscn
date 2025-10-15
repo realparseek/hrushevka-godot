@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=4 uid="uid://c6uww6ripgcff"]
+[gd_scene load_steps=114 format=4 uid="uid://c6uww6ripgcff"]
 
 [ext_resource type="Texture2D" uid="uid://b4213gxdt68do" path="res://models/near_to_exit_doors/near_to_exit_door.png" id="1_erp5q"]
 [ext_resource type="PackedScene" uid="uid://geb30cjmopjl" path="res://prefabs/player.tscn" id="1_kxjkn"]
@@ -11,10 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://cy7q8l07gn27n" path="res://models/near_to_exit_doors/near_to_exit_staircase_128.png" id="8_qre4e"]
 [ext_resource type="Texture2D" uid="uid://sg50mdbij6bk" path="res://models/near_to_exit_doors/near_to_exit_railing.png" id="9_lcqa0"]
 [ext_resource type="PackedScene" uid="uid://1883k2335wau" path="res://prefabs/door_2.tscn" id="11_kxjkn"]
+[ext_resource type="Script" uid="uid://ccyjlfticbtrc" path="res://scripts/omni_light_3d.gd" id="11_lcqa0"]
 [ext_resource type="PackedScene" uid="uid://dlg4xjlvtgtps" path="res://models/электрощиток/электрощиток.glb" id="12_erp5q"]
 [ext_resource type="PackedScene" uid="uid://bomva7sdrp37a" path="res://prefabs/room_pregen.tscn" id="13_8tq5h"]
 [ext_resource type="PackedScene" uid="uid://drw6ihilkge66" path="res://prefabs/lightbulb.tscn" id="14_7iym2"]
-[ext_resource type="Shader" uid="uid://iouphtxhkil3" path="res://shaders/ps1_post_proccess.gdshader" id="15_bhtnt"]
+[ext_resource type="Shader" uid="uid://doxte1xpnc2aw" path="res://shader_test/test_shader.gdshader" id="15_qre4e"]
 [ext_resource type="Script" uid="uid://cy13o256s2be3" path="res://uother.gd" id="16_aab6w"]
 [ext_resource type="AudioStream" uid="uid://dvrrfgatp7a8x" path="res://sounds/abmience/transformer_hum1.ogg" id="17_gsthd"]
 [ext_resource type="AudioStream" uid="uid://cxwabyjbe1wj4" path="res://sounds/abmience/underground.ogg" id="17_xvwhl"]
@@ -1090,8 +1091,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_s0pjq")
 
 [sub_resource type="Environment" id="Environment_lcqa0"]
+background_mode = 3
 tonemap_mode = 3
-tonemap_exposure = 1.1
+tonemap_exposure = 1.2
+tonemap_white = 0.8
 ssao_enabled = true
 ssao_radius = 1.5
 glow_enabled = true
@@ -1151,12 +1154,13 @@ size = Vector3(1.64355, 0.316589, 3.12676)
 size = Vector3(3.61746, 0.295441, 2.24022)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_aab6w"]
-shader = ExtResource("15_bhtnt")
+shader = ExtResource("15_qre4e")
 shader_parameter/viewport_size = Vector2(1600, 900)
 shader_parameter/virtual_resolution = Vector2(640, 480)
-shader_parameter/shadow_smoothness = 0.7
-shader_parameter/color_depth = 64
-shader_parameter/dither_strength = 0.01
+shader_parameter/color_quantization = 0.5
+shader_parameter/scanline_strength = 0.3
+shader_parameter/vignette_strength = 0.4
+shader_parameter/chroma_aberration = 0.002
 
 [sub_resource type="AudioStream" id="AudioStream_aab6w"]
 
@@ -1355,6 +1359,7 @@ light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
 omni_range = 4.7433
+script = ExtResource("11_lcqa0")
 
 [node name="OmniLight3D8" type="OmniLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54826, 2.32087, 2.13353)
@@ -1368,42 +1373,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.35607, 4.74257, 10.5835)
 light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
-omni_range = 2.40825
+omni_range = 3.8
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67746, 4.74257, 10.5835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67746, 4.775099, 10.5835)
 light_color = Color(0.802342, 0.808405, 0.723, 1)
+light_size = 0.1
 light_specular = 0.1
 shadow_enabled = true
-omni_range = 2.40825
+omni_range = 3.8
 
 [node name="OmniLight3D" type="OmniLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5282, 4.80124, 10.7144)
 light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
-omni_range = 2.40825
+omni_range = 3.8
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.40837, 4.71651, 10.5835)
 light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
-omni_range = 2.40825
+omni_range = 3.8
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.92518, 4.71651, 10.5835)
 light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
-omni_range = 2.40825
+omni_range = 3.8
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.07444, 4.77518, 10.7144)
 light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
-omni_range = 2.40825
+omni_range = 3.8
 
 [node name="collisions" type="Node3D" parent="."]
 
