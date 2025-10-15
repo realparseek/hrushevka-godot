@@ -15,8 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://dlg4xjlvtgtps" path="res://models/электрощиток/электрощиток.glb" id="12_erp5q"]
 [ext_resource type="PackedScene" uid="uid://bomva7sdrp37a" path="res://prefabs/room_pregen.tscn" id="13_8tq5h"]
 [ext_resource type="PackedScene" uid="uid://drw6ihilkge66" path="res://prefabs/lightbulb.tscn" id="14_7iym2"]
-[ext_resource type="Shader" uid="uid://doxte1xpnc2aw" path="res://shader_test/test_shader.gdshader" id="15_qre4e"]
 [ext_resource type="Script" uid="uid://cy13o256s2be3" path="res://uother.gd" id="16_aab6w"]
+[ext_resource type="Shader" uid="uid://bhkygpow84l70" path="res://shaders/NewShader.gdshader" id="16_lcqa0"]
 [ext_resource type="AudioStream" uid="uid://dvrrfgatp7a8x" path="res://sounds/abmience/transformer_hum1.ogg" id="17_gsthd"]
 [ext_resource type="AudioStream" uid="uid://cxwabyjbe1wj4" path="res://sounds/abmience/underground.ogg" id="17_xvwhl"]
 [ext_resource type="Script" uid="uid://brkx2lbhwje1k" path="res://scripts/radio.gd" id="19_qre4e"]
@@ -1154,10 +1154,12 @@ size = Vector3(1.64355, 0.316589, 3.12676)
 size = Vector3(3.61746, 0.295441, 2.24022)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_aab6w"]
-shader = ExtResource("15_qre4e")
+shader = ExtResource("16_lcqa0")
 shader_parameter/viewport_size = Vector2(1600, 900)
 shader_parameter/virtual_resolution = Vector2(640, 480)
-shader_parameter/color_quantization = 0.5
+shader_parameter/shadow_smoothness = 0.7
+shader_parameter/color_depth = 64
+shader_parameter/dither_strength = 0.01
 shader_parameter/scanline_strength = 0.3
 shader_parameter/vignette_strength = 0.4
 shader_parameter/chroma_aberration = 0.002
