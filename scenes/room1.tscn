@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=4 uid="uid://c6uww6ripgcff"]
+[gd_scene load_steps=117 format=4 uid="uid://c6uww6ripgcff"]
 
 [ext_resource type="Texture2D" uid="uid://b4213gxdt68do" path="res://models/near_to_exit_doors/near_to_exit_door.png" id="1_erp5q"]
 [ext_resource type="PackedScene" uid="uid://geb30cjmopjl" path="res://prefabs/player.tscn" id="1_kxjkn"]
@@ -11,10 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://cy7q8l07gn27n" path="res://models/near_to_exit_doors/near_to_exit_staircase_128.png" id="8_qre4e"]
 [ext_resource type="Texture2D" uid="uid://sg50mdbij6bk" path="res://models/near_to_exit_doors/near_to_exit_railing.png" id="9_lcqa0"]
 [ext_resource type="PackedScene" uid="uid://1883k2335wau" path="res://prefabs/door_2.tscn" id="11_kxjkn"]
-[ext_resource type="Script" uid="uid://ccyjlfticbtrc" path="res://scripts/omni_light_3d.gd" id="11_lcqa0"]
+[ext_resource type="Script" uid="uid://ccyjlfticbtrc" path="res://scripts/lights/lamp_unstable.gd" id="11_lcqa0"]
 [ext_resource type="PackedScene" uid="uid://dlg4xjlvtgtps" path="res://models/электрощиток/электрощиток.glb" id="12_erp5q"]
+[ext_resource type="Script" uid="uid://b7d4it7fk8oj0" path="res://scripts/lights/lamp_stable.gd" id="12_toykf"]
 [ext_resource type="PackedScene" uid="uid://bomva7sdrp37a" path="res://prefabs/room_pregen.tscn" id="13_8tq5h"]
+[ext_resource type="Script" uid="uid://dsi07n4sus0s4" path="res://scripts/lights/lamp_max_stable.gd" id="13_ysmmy"]
 [ext_resource type="PackedScene" uid="uid://drw6ihilkge66" path="res://prefabs/lightbulb.tscn" id="14_7iym2"]
+[ext_resource type="Script" uid="uid://knik24oln1mt" path="res://scripts/lights/lamp_max_unstable.gd" id="14_ysmmy"]
 [ext_resource type="Script" uid="uid://cy13o256s2be3" path="res://uother.gd" id="16_aab6w"]
 [ext_resource type="Shader" uid="uid://doxte1xpnc2aw" path="res://shader_test/test_shader.gdshader" id="16_lcqa0"]
 [ext_resource type="AudioStream" uid="uid://dvrrfgatp7a8x" path="res://sounds/abmience/transformer_hum1.ogg" id="17_gsthd"]
@@ -1370,13 +1373,15 @@ light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
 omni_range = 4.7433
+script = ExtResource("12_toykf")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.35607, 4.74257, 10.5835)
 light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
-omni_range = 3.8
+omni_range = 3.1
+script = ExtResource("13_ysmmy")
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67746, 4.775099, 10.5835)
@@ -1385,6 +1390,7 @@ light_size = 0.1
 light_specular = 0.1
 shadow_enabled = true
 omni_range = 3.8
+script = ExtResource("13_ysmmy")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5282, 4.80124, 10.7144)
@@ -1392,6 +1398,7 @@ light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
 omni_range = 3.8
+script = ExtResource("12_toykf")
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.40837, 4.71651, 10.5835)
@@ -1399,20 +1406,23 @@ light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
 omni_range = 3.8
+script = ExtResource("14_ysmmy")
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.92518, 4.71651, 10.5835)
 light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
-omni_range = 3.8
+omni_range = 3.0
+script = ExtResource("12_toykf")
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.07444, 4.77518, 10.7144)
 light_color = Color(0.802342, 0.808405, 0.723, 1)
 light_specular = 0.1
 shadow_enabled = true
-omni_range = 3.8
+omni_range = 3.2
+script = ExtResource("13_ysmmy")
 
 [node name="collisions" type="Node3D" parent="."]
 
@@ -1560,17 +1570,17 @@ emission_angle_enabled = true
 emission_angle_degrees = 90.0
 
 [node name="radio" type="AudioStreamPlayer3D" parent="AudioStreamPlayer"]
-transform = Transform3D(-0.76153827, 0, -0.6481199, 0, 1, 0, 0.6481199, 0, -0.76153827, -2.274725, 3.452009, 14.763464)
+transform = Transform3D(-0.5047235, 0, -0.8632811, 0, 1, 0, 0.8632811, 0, -0.5047235, -2.274725, 3.452009, 15.284778)
 stream = SubResource("AudioStream_lcqa0")
 volume_db = -55.0
-unit_size = 50.0
+unit_size = 100.0
 max_db = -24.0
 autoplay = true
-max_distance = 5.0
+max_distance = 4.0
 bus = &"radio"
 playback_type = 1
 emission_angle_enabled = true
-emission_angle_degrees = 78.0
+emission_angle_degrees = 57.0
 emission_angle_filter_attenuation_db = -80.0
 doppler_tracking = 2
 script = ExtResource("19_qre4e")
