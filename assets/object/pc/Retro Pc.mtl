@@ -1,0 +1,113 @@
+# Blender 4.5.3 LTS MTL File: 'office pack for uploading.blend'
+# www.blender.org
+
+newmtl Monitor_Cream
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint Monitor Cream Color.png
+map_Pm /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint Monitor Cream Metallic.png
+map_Pr /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint Monitor Cream Roughness.png
+map_Bump -bm 1.000000 /Users/yeshelove/Blender/Office Pack for uploading/textures/Monitor Cream_Normal.png
+
+newmtl Monitor_Glass
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Pr 0.500000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd /Users/yeshelove/Blender/Office Pack for uploading/textures/Monitor Glass_BaseColor.png
+map_Bump -bm 1.000000 /Users/yeshelove/Blender/Office Pack for uploading/textures/Monitor Glass_Normal.png
+
+newmtl Mouse_Cream
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint Mouse Creme Color.png
+map_Pr /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint Mouse Creme Roughness.png
+map_Bump -bm 1.000000 /Users/yeshelove/Blender/Office Pack for uploading/textures/Mouse 2_Normal.png
+
+newmtl PC_Cream
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint PC Creme Color.png
+map_Pr /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint PC Creme Roughness.png
+map_Bump -bm 1.000000 /Users/yeshelove/Blender/Office Pack for uploading/textures/PC.002_Normal.png
+
+newmtl PC_Front_Cream
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint PC Creme Front Color.png
+map_Pr /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint PC Creme Front Roughness.png
+map_Bump -bm 1.000000 /Users/yeshelove/Blender/Office Pack for uploading/textures/PC_Front.001_Normal.png
+
+newmtl Pc_Feet
+Kd 0.031899 0.031899 0.031899
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Pr 0.350000
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+
+newmtl Ucupaint_Keyboard_Creme
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+Pm 0.000000
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint Keyboard Creme.001 Color.png
+map_Pr /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint Keyboard Creme.001 Roughness.png
+map_Bump -bm 1.000000 /Users/yeshelove/Blender/Office Pack for uploading/textures/Ucupaint Keyboard Creme_Normal.png
