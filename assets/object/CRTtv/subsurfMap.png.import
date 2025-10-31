@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1onyp6vmigxr"
-path.s3tc="res://.godot/imported/PSX Radio Receiver_Radio Color 256.jpg-c441d36de38a136c49e315fc36eb58ca.s3tc.ctex"
+uid="uid://ygyx2ry4vuig"
+path="res://.godot/imported/subsurfMap.png-4d33469b98c753ad20e8b3e7a45474e1.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "b1100b0e5125b3dd4c975280e7b820bd"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/object/radio/PSX Radio Receiver_Radio Color 256.jpg"
-dest_files=["res://.godot/imported/PSX Radio Receiver_Radio Color 256.jpg-c441d36de38a136c49e315fc36eb58ca.s3tc.ctex"]
+source_file="res://assets/object/CRTtv/subsurfMap.png"
+dest_files=["res://.godot/imported/subsurfMap.png-4d33469b98c753ad20e8b3e7a45474e1.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -41,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

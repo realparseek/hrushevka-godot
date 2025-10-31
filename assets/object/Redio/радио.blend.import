@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bn7qmttcfy1yv"
-path="res://.godot/imported/Tv.blend-21370c33c1dcc50dc48e206037d67b5d.scn"
+uid="uid://hba4b6a6y8ii"
+path="res://.godot/imported/радио.blend-c4e34c09027aa53c5fde895e572c7482.scn"
 
 [deps]
 
-source_file="res://assets/object/Models/Tv/Tv.blend"
-dest_files=["res://.godot/imported/Tv.blend-21370c33c1dcc50dc48e206037d67b5d.scn"]
+source_file="res://assets/object/Redio/радио.blend"
+dest_files=["res://.godot/imported/радио.blend-c4e34c09027aa53c5fde895e572c7482.scn"]
 
 [params]
 
@@ -24,7 +24,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=0
+meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -34,8 +34,8 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=2
-materials/extract_format=1
+materials/extract=0
+materials/extract_format=0
 materials/extract_path=""
 _subresources={}
 blender/nodes/visible=0

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bn7qmttcfy1yv"
-path="res://.godot/imported/Tv.blend-21370c33c1dcc50dc48e206037d67b5d.scn"
+uid="uid://c6c2b4l2k0rvu"
+path="res://.godot/imported/CRTMonitor.blend-a84857d6b4c0264c1d1ce868706de91d.scn"
 
 [deps]
 
-source_file="res://assets/object/Models/Tv/Tv.blend"
-dest_files=["res://.godot/imported/Tv.blend-21370c33c1dcc50dc48e206037d67b5d.scn"]
+source_file="res://assets/object/CRTtv/CRTMonitor.blend"
+dest_files=["res://.godot/imported/CRTMonitor.blend-a84857d6b4c0264c1d1ce868706de91d.scn"]
 
 [params]
 
@@ -24,7 +24,7 @@ nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
-meshes/light_baking=0
+meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
 skins/use_named_skins=true
@@ -34,8 +34,8 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=2
-materials/extract_format=1
+materials/extract=0
+materials/extract_format=0
 materials/extract_path=""
 _subresources={}
 blender/nodes/visible=0

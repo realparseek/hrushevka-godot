@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dc6xx5j2dhkql"
-path="res://.godot/imported/PSX Radio Receiver.glb-708de7399cad6a4ca2f239d1ba3db724.scn"
+uid="uid://dweaqq7w1d83y"
+path="res://.godot/imported/CRTMonitor.glb-19becaf73b55f8100d9ce22ac9ae028a.scn"
 
 [deps]
 
-source_file="res://assets/object/radio/PSX Radio Receiver.glb"
-dest_files=["res://.godot/imported/PSX Radio Receiver.glb-708de7399cad6a4ca2f239d1ba3db724.scn"]
+source_file="res://assets/object/CRTtv/CRTMonitor.glb"
+dest_files=["res://.godot/imported/CRTMonitor.glb-19becaf73b55f8100d9ce22ac9ae028a.scn"]
 
 [params]
 
