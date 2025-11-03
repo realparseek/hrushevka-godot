@@ -1,0 +1,6 @@
+[gd_resource type="SteamAudioMaterial" format=3 uid="uid://cp5pfey82wrv5"]
+
+[resource]
+absorption_low = 1.0
+absorption_mid = 1.0
+absorption_high = 1.0
