@@ -1,7 +1,13 @@
-[gd_scene load_steps=15 format=4 uid="uid://1883k2335wau"]
+[gd_scene load_steps=21 format=4 uid="uid://1883k2335wau"]
 
-[ext_resource type="Script" uid="uid://cobo32khw6tpc" path="res://scripts/openable.gd" id="1_ad8e4"]
+[ext_resource type="Script" uid="uid://ccdgrap4j7yrk" path="res://scripts/interactable.gd" id="1_ad8e4"]
+[ext_resource type="Script" uid="uid://4lhd06bqpci7" path="res://scripts/state_machine.gd" id="1_yfdjx"]
 [ext_resource type="Texture2D" uid="uid://xqchsea5trai" path="res://models/door2/door2_rooms_door.png" id="2_ad8e4"]
+[ext_resource type="Script" uid="uid://3o6w5cr6ttyi" path="res://scripts/interactions/door/door_open.gd" id="2_cyrtm"]
+[ext_resource type="Script" uid="uid://d022dkkyw8olr" path="res://scripts/states/door/door_opened.gd" id="2_h27bg"]
+[ext_resource type="Script" uid="uid://bx6pd7xp5y7uy" path="res://scripts/states/door/door_closed.gd" id="3_gw5w7"]
+[ext_resource type="Script" uid="uid://b8jxgkqs5j6jj" path="res://scripts/states/door/door_opening.gd" id="4_gw5w7"]
+[ext_resource type="Script" uid="uid://dyj5i4ir1etd3" path="res://scripts/states/door/door_closing.gd" id="5_b3s2t"]
 
 [sub_resource type="Animation" id="Animation_2vff0"]
 resource_name = "Action"
@@ -176,10 +182,27 @@ blend_shape_mode = 0
 [node name="door2" type="Node3D"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
-[node name="Openable" type="Node" parent="." node_paths=PackedStringArray("animation", "outline_mesh")]
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("1_yfdjx")
+
+[node name="DoorOpened" type="Node" parent="StateMachine"]
+script = ExtResource("2_h27bg")
+
+[node name="DoorClosed" type="Node" parent="StateMachine"]
+script = ExtResource("3_gw5w7")
+
+[node name="DoorOpening" type="Node" parent="StateMachine"]
+script = ExtResource("4_gw5w7")
+
+[node name="DoorClosing" type="Node" parent="StateMachine"]
+script = ExtResource("5_b3s2t")
+
+[node name="Interactable" type="Node" parent="."]
 script = ExtResource("1_ad8e4")
-animation = NodePath("../AnimationPlayer")
-outline_mesh = NodePath("../StaticBody3D/Armature/Skeleton3D/door_001")
+
+[node name="DoorOpen" type="Node" parent="Interactable" node_paths=PackedStringArray("animation")]
+script = ExtResource("2_cyrtm")
+animation = NodePath("../../AnimationPlayer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../StaticBody3D")
@@ -205,14 +228,14 @@ bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0.65267, 0.503063, -0.0310642)
 bones/0/enabled = true
 bones/0/position = Vector3(0.65267, 0.503063, -0.0310642)
-bones/0/rotation = Quaternion(-0.707107, 0, 0, 0.707107)
+bones/0/rotation = Quaternion(-0.7071068, 0, 0, 0.7071068)
 bones/0/scale = Vector3(1, 1, 1)
 bones/1/name = "doorknob"
 bones/1/parent = 0
 bones/1/rest = Transform3D(1, 0, 0, 0, -0.999252, 0.0386651, 0, -0.0386651, -0.999253, 0.00756907, 0.808209, 0.0157172)
 bones/1/enabled = true
 bones/1/position = Vector3(0.00756907, 0.808209, 0.0157172)
-bones/1/rotation = Quaternion(0.999724, 0, 0, -0.0234991)
+bones/1/rotation = Quaternion(0.9997239, 0, 0, -0.023499098)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "neutral_bone"
 bones/2/parent = -1

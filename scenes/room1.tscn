@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cw6x4nuu8i1fw" path="res://models/near_to_exit_doors/near_to_exit_wooden_door.png" id="7_xvwhl"]
 [ext_resource type="Texture2D" uid="uid://cy7q8l07gn27n" path="res://models/near_to_exit_doors/near_to_exit_staircase_128.png" id="8_qre4e"]
 [ext_resource type="Texture2D" uid="uid://sg50mdbij6bk" path="res://models/near_to_exit_doors/near_to_exit_railing.png" id="9_lcqa0"]
-[ext_resource type="PackedScene" uid="uid://1883k2335wau" path="res://prefabs/door_2.tscn" id="11_kxjkn"]
+[ext_resource type="PackedScene" uid="uid://1883k2335wau" path="res://prefabs/door.tscn" id="11_kxjkn"]
 [ext_resource type="PackedScene" uid="uid://dlg4xjlvtgtps" path="res://models/электрощиток/электрощиток.glb" id="12_erp5q"]
 [ext_resource type="PackedScene" uid="uid://bomva7sdrp37a" path="res://prefabs/room_pregen.tscn" id="13_8tq5h"]
 [ext_resource type="PackedScene" uid="uid://drw6ihilkge66" path="res://prefabs/lightbulb.tscn" id="14_7iym2"]
