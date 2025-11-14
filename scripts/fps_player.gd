@@ -18,6 +18,7 @@ var jump_timer : float = jump_duration
 var headbob_timer : float = 0.0
 var look_sensetivity_mul : float = 0.001
 
+	
 func _ready() -> void:
 	outline_material = load("res://materials/outline2/outline2.tres")
 	
@@ -113,3 +114,4 @@ func _get_hovered_object() -> Object:
 		return obj.get_parent()
 	else:
 		return null
+		

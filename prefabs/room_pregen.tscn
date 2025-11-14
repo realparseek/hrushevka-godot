@@ -1,4 +1,4 @@
-[gd_scene load_steps=193 format=4 uid="uid://bomva7sdrp37a"]
+[gd_scene load_steps=201 format=4 uid="uid://bomva7sdrp37a"]
 
 [ext_resource type="Texture2D" uid="uid://1wpf18xcdfxf" path="res://models/room_pregen/room_pregen_bathtub.png" id="1_qe3y0"]
 [ext_resource type="Texture2D" uid="uid://dfijh4xaqqgs" path="res://models/room_pregen/room_pregen_crane.png" id="2_oiwmb"]
@@ -7,12 +7,16 @@
 [ext_resource type="Texture2D" uid="uid://i7nopv0mfd1l" path="res://models/room_pregen/room_pregen_floor.png" id="5_md4je"]
 [ext_resource type="Texture2D" uid="uid://bex0jm2ui6lbk" path="res://models/room_pregen/room_pregen_sofa.png" id="6_1mbmv"]
 [ext_resource type="Texture2D" uid="uid://c0ejy1kqx3xjj" path="res://models/room_pregen/room_pregen_pillow.png" id="7_hggur"]
+[ext_resource type="SteamAudioMaterial" uid="uid://cexuij8fef5ay" path="res://addons/godot-steam-audio/materials/carpet_material.tres" id="7_md4je"]
 [ext_resource type="Texture2D" uid="uid://b3qpj5nbutfkb" path="res://models/room_pregen/room_pregen_big_shelf.png" id="8_0eie5"]
 [ext_resource type="Texture2D" uid="uid://b834o5td00f73" path="res://models/room_pregen/room_pregen_вешалка_256.png" id="9_17nq0"]
+[ext_resource type="SteamAudioMaterial" uid="uid://oyakg0idhulv" path="res://addons/godot-steam-audio/materials/wood_material.tres" id="10_1mbmv"]
 [ext_resource type="Texture2D" uid="uid://bhh68gw1s4k7j" path="res://models/room_pregen/room_pregen_wall0_redacted.png" id="10_7k5er"]
 [ext_resource type="Texture2D" uid="uid://dndikjeee0pie" path="res://models/room_pregen/room_pregen_bathroom_wall0.png" id="11_acse4"]
 [ext_resource type="Texture2D" uid="uid://cva0aj8d3434r" path="res://models/room_pregen/room_pregen_bathroom_wall1.png" id="12_kbodv"]
 [ext_resource type="Texture2D" uid="uid://hpkd7tcy4kgn" path="res://models/room_pregen/room_pregen_bathroom_floor0.png" id="13_t6jd6"]
+[ext_resource type="SteamAudioMaterial" uid="uid://bljhgad6g2vnm" path="res://addons/godot-steam-audio/materials/concrete_material.tres" id="16_hggur"]
+[ext_resource type="SteamAudioMaterial" uid="uid://cx5t18v1v5jku" path="res://addons/godot-steam-audio/materials/ceramic_material.tres" id="17_0eie5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kwavb"]
 resource_name = "bathtub.001"
@@ -54,6 +58,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tt44i")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u4gfj"]
+size = Vector3(0.5559082, 0.21237183, 0.5242462)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4xil"]
 resource_name = "кран.001"
@@ -519,6 +526,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_beuas")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t6jd6"]
+size = Vector3(1, 0.4333191, 2.503479)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_87dck"]
 _surfaces = [{
@@ -1160,6 +1170,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8711v")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j233c"]
+size = Vector3(0.8159714, 2.6606445, 1.0840721)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jxrdm"]
 resource_name = "big_shelf.004"
@@ -2576,6 +2589,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3d6mg")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_3hnb7"]
+size = Vector3(0.72766113, 0.39245605, 1.5056152)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_qe3y0"]
 size = Vector3(0.248701, 3.03784, 2.4626107)
 
@@ -2618,6 +2634,15 @@ size = Vector3(8.421878, 0.11468458, 7.003401)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9496305, 0.7761473, 3.5301404)
 mesh = SubResource("ArrayMesh_qlhv6")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="руковина"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="руковина/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.020629883, 0.015823364, 0.005592346)
+shape = SubResource("BoxShape3D_u4gfj")
+
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="руковина/StaticBody3D/CollisionShape3D"]
+material = ExtResource("17_0eie5")
 
 [node name="индручки" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1133354, 1.9100575, 3.153656)
@@ -2683,6 +2708,15 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5768236, 0.34187785, 5.719331)
 mesh = SubResource("ArrayMesh_vuyct")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_051"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_051/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12275696, -0.004058838)
+shape = SubResource("BoxShape3D_t6jd6")
+
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="Cube_051/StaticBody3D/CollisionShape3D"]
+material = ExtResource("7_md4je")
 
 [node name="Cube_052" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6923703, 0.06792552, 5.738245)
@@ -2798,6 +2832,22 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.136733, 1.3423806, 2.70399)
 mesh = SubResource("ArrayMesh_ot0h6")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_053"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_053/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39479446, 0.12036133, 1.4583912)
+shape = SubResource("BoxShape3D_j233c")
+
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="Cube_053/StaticBody3D/CollisionShape3D"]
+material = ExtResource("10_1mbmv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Cube_053/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39479446, 0.12036133, -0.6783304)
+shape = SubResource("BoxShape3D_j233c")
+
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="Cube_053/StaticBody3D/CollisionShape3D2"]
+material = ExtResource("10_1mbmv")
 
 [node name="BézierCurve_011" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.322538, 2.3965151, 2.0628276)
@@ -3050,6 +3100,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8496304, 0.29446298, 2.1668
 mesh = SubResource("ArrayMesh_lrcwi")
 skeleton = NodePath("")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="bathtub"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bathtub/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007751465, 0.018127441, 0.09509277)
+shape = SubResource("BoxShape3D_3hnb7")
+
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="bathtub/StaticBody3D/CollisionShape3D"]
+material = ExtResource("17_0eie5")
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.550522, 0.5915526)
 light_color = Color(0.6199716, 0.5703204, 0.43722445, 1)
@@ -3073,46 +3132,82 @@ omni_range = 5.387515
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8861354, 1.5579562, 1.38392)
 shape = SubResource("BoxShape3D_qe3y0")
 
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D5"]
+material = ExtResource("16_hggur")
+
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="collisions/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8755562, 1.5579562, 5.2551107)
 shape = SubResource("BoxShape3D_oiwmb")
+
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D6"]
+material = ExtResource("16_hggur")
 
 [node name="CollisionShape3D13" type="CollisionShape3D" parent="collisions/StaticBody3D"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.0780096, 1.5579562, 6.9753466)
 shape = SubResource("BoxShape3D_anril")
 
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D13"]
+material = ExtResource("16_hggur")
+
 [node name="CollisionShape3D16" type="CollisionShape3D" parent="collisions/StaticBody3D"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.018289924, 1.5579562, 4.19386)
 shape = SubResource("BoxShape3D_kbodv")
+
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D16"]
+material = ExtResource("16_hggur")
 
 [node name="CollisionShape3D15" type="CollisionShape3D" parent="collisions/StaticBody3D"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.0780096, 1.5579562, 1.4818482)
 shape = SubResource("BoxShape3D_63v5l")
 
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D15"]
+material = ExtResource("16_hggur")
+
 [node name="CollisionShape3D14" type="CollisionShape3D" parent="collisions/StaticBody3D"]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.1196127, 1.5579562, 4.1649885)
 shape = SubResource("BoxShape3D_md4je")
+
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D14"]
+material = ExtResource("16_hggur")
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="collisions/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2951834, 1.2845802, 2.8318677)
 shape = SubResource("BoxShape3D_1mbmv")
 
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D8"]
+material = ExtResource("17_0eie5")
+
 [node name="CollisionShape3D11" type="CollisionShape3D" parent="collisions/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.86306, 1.5436442, 3.8507755)
 shape = SubResource("BoxShape3D_hggur")
+
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D11"]
+material = ExtResource("16_hggur")
 
 [node name="CollisionShape3D12" type="CollisionShape3D" parent="collisions/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85833895, 1.544453, 1.3873016)
 shape = SubResource("BoxShape3D_0eie5")
 
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D12"]
+material = ExtResource("16_hggur")
+
 [node name="CollisionShape3D9" type="CollisionShape3D" parent="collisions/StaticBody3D"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.075585, 1.2845802, 1.4872539)
 shape = SubResource("BoxShape3D_17nq0")
+
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D9"]
+material = ExtResource("17_0eie5")
 
 [node name="CollisionShape3D10" type="CollisionShape3D" parent="collisions/StaticBody3D"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.075585, 1.2845802, 4.173921)
 shape = SubResource("BoxShape3D_7k5er")
 
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D10"]
+material = ExtResource("17_0eie5")
+
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="collisions/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9483161, -0.018870056, 3.5007129)
 shape = SubResource("BoxShape3D_acse4")
+
+[node name="SteamAudioGeometry" type="SteamAudioGeometry" parent="collisions/StaticBody3D/CollisionShape3D7"]
+material = ExtResource("7_md4je")
